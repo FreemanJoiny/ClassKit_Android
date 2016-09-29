@@ -1,0 +1,25 @@
+SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
+SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("MM.dd");
+Calendar calendar = Calendar.getInstance();
+calendar.setTime(new Date());
+//今天
+dateArray[0] = simpleDateFormat1.format(calendar.getTime());
+
+//明天
+calendar.add(Calendar.DATE, 1);
+dateArray[1] = simpleDateFormat1.format(calendar.getTime());
+
+//后天
+calendar.add(Calendar.DATE, 1);
+dateArray[2] = simpleDateFormat1.format(calendar.getTime());
+((RadioButton) hz_rg.getChildAt(2)).setText(simpleDateFormat2.format(calendar.getTime()));
+
+//三天后
+calendar.add(Calendar.DATE, 1);
+dateArray[3] = simpleDateFormat1.format(calendar.getTime());
+((RadioButton) hz_rg.getChildAt(3)).setText(simpleDateFormat2.format(calendar.getTime()));
+
+//四天后
+calendar.add(Calendar.DATE, 1);
+dateArray[4] = simpleDateFormat1.format(calendar.getTime());
+((RadioButton) hz_rg.getChildAt(4)).setText(simpleDateFormat2.format(calendar.getTime()));

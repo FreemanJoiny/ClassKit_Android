@@ -1,0 +1,2 @@
+สนำร((RadioButton) hz_rg.getChildAt(0)).setChecked(true);
+ด๚ฬๆhz_rg.checked(hz_rg.getChildAt(0).getId)

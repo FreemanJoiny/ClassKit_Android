@@ -1,0 +1,4 @@
+一进入一个页面, EditText默认就会自动获取焦点。解决之道：找一个EditText的父级控件，设置成
+ 
+    android:focusable="true"  
+    android:focusableInTouchMode="true"

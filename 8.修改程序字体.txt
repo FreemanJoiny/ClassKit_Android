@@ -1,0 +1,19 @@
+相信很多对设计追求极致的开发者们对Android系统的默认字体都会感到不满意，这个时候需要使用自定义的字体，当然可以使用系统提供的Typeface来加载自定义字体，但是，一个个TextView的设置，是不是很快就疯了，本文给大家介绍如何快速定义自定义的app全局字体
+
+方法很简单，就是使用github上的一个开源库Calligraphy，使用步骤只需要以下几步
+
+    在AndroidStudio中添加依赖，搜索calligraphy点击添加即可（如果还没有使用AndroidStudio，推荐切换到此google官方开发工具）
+    自定义Application，在onCreate里面配置默认字体
+
+CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().setDefaultFontPath("fonts/Roboto-Bold.ttf").setFontAttrId(R.attr.fontPath).build());
+
+    在Activity中重写attachBaseContext方法(推荐使用一个BaseActivity，app中的所有Activity继承自BaseActivity)
+
+super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+
+这样，TextView的默认字体就成了你设置的Roboto-Bold字体，如果要单独对TextView设置其他字体，可以直接在xml中或style中使用fontPath，多种使用方法请参考github上Calligraphy的Readme文档和Sample示例程序。
+
+
+edittext.setEllipsize(TextUtils.TruncateAt.END);
+        Typeface typeFace  = Typeface.createFromAsset(getContext().getAssets(), "fonts/LTH.TTF");
+        edittext.setTypeface(typeFace);

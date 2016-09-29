@@ -1,0 +1,29 @@
+//使用这个会使所有的edittext发生联动        
+viewHolder.hz_et_message.addTextChangedListener(null);
+viewHolder.hz_et_message.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i0, int i1, int i2) {
+                list.get(i).setCommentContent(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+使用这个可以当edittext失去焦点时,修改数据,但必须在提交或做其他操作时,使其失去焦点,方法是listview.clearFocus()
+viewHolder.hz_et_message.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (!b) {//失去焦点时触发
+                    EditText editText = (EditText) view;
+                    list.get(i).setCommentContent(editText.getText().toString());
+                }
+            }
+        });

@@ -1,0 +1,1 @@
+ hz_tv_startTime.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);

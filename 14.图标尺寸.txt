@@ -1,0 +1,5 @@
+LDPI (Low Density Screen，120 DPI)，其图标大小为 36 x 36 px。
+MDPI (Medium Density Screen, 160 DPI)，其图标大小为 48 x 48 px。
+HDPI (High Density Screen, 240 DPI)，其图标大小为 72 x 72 px。
+xhdpi (Extra-high density screen, 320 DPI)，其图标大小为 96 x 96 px。
+xxhdpi (Extra-high density screen, 480 DPI)，其图标大小为 144 x 144 px。
