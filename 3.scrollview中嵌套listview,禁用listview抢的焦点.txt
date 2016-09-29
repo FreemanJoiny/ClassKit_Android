@@ -1,0 +1,5 @@
+scrollview里面嵌套了一个listview ，通过设置一个方法设置了listview的高度 现在的情况就是进到这个界面的时候看到的不是最上面 而是中间 ，该问题的解决办法为：
+
+mScrollView.smoothScrollTo(0,20);
+
+如此以上代码还是无效， 在代码里去掉listview的焦点 lv.setFocusable(false)，再试下就可以了;

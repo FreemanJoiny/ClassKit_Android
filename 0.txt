@@ -1,0 +1,5 @@
+android Recyclerview仿京东，滚动屏幕标题栏渐变（启动页面动画） 
+http://blog.csdn.net/jdsjlzx/article/details/49966101
+Android自定义控件之仿京东商城下拉刷新 
+http://blog.csdn.net/nugongahou110/article/details/50000911
+http://tan4836128.iteye.com/blog/1717809

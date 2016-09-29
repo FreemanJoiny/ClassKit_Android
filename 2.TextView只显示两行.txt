@@ -1,0 +1,3 @@
+android:lines="2"		//设置了当前行数为2行
+android:maxLines="2"		//最多为2行
+android:ellipsize="end"		//文本超出行结尾显示....
